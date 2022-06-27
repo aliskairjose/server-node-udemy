@@ -54,4 +54,4 @@ app.get('*', (req, res) => {
   res.sendFile(__dirname + '/public/404.html')
 })
 
-app.listen(port)
+app.listen(port, () => console.log(`Escuchando por el puerto: ${port}`))
