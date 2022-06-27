@@ -54,7 +54,7 @@ app.get('/elements', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/public/404.html')
+  res.sendFile(__dirname + '/public/template/404.html')
 })
 
 app.listen(port, () => console.log(`Escuchando por el puerto: ${port}`))
