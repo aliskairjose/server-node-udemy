@@ -3,7 +3,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { engine } from 'express-handlebars';
 import hbs from 'hbs'
-import dotenv from 'dotenv/config'
+import dotenv from 'dotenv'
+
+if (process.env.NODE_ENV !== 'production') dotenv.config();
+
 
 const app = express()
 const __filename = fileURLToPath(import.meta.url);
